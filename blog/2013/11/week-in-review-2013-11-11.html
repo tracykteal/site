@@ -1,0 +1,56 @@
+---
+layout: blog
+root: ../../..
+author: Aron Ahmadia
+title: "Week in Review: Nov 4-11, 2013"
+date: 2013-11-11
+time: "12:00:00"
+category: ["Week in Review"]
+---
+<!-- start excerpt -->
+<p>To help you keep on top of <a href="{{page.root}}">Software Carpentry</a> news, one of our contributors and instructors, <a href="http://aron.ahmadia.net/">Aron Ahmadia,</a> has begun pulling together weekly summaries. Here you can see what the community has been up to, find out how you can get involved, and learn more about our work addressing the digital skills gap in science. Care to join the conversation? See the bottom of the post for more, or join our discussion lists (<a href="{{page.root}}/contrib/discuss.html">Software Carpentry lists </a>; <a href="https://mail.mozilla.org/listinfo/mozillascience">Mozilla Science Lab list</a>).</p>
+<p>Many thanks, Aron!</p>
+<!-- end excerpt -->
+<p><em>Note from the editor:  I'm trying to summarizing activity on the ground in bootcamps, on GitHub, in the instructor training, and on our blog. The primary goal of this email is to help people stay connected with Software Carpentry and keep up with how to contribute. Please feel free to send feedback directly back to me at <a href="mailto: aron@ahmadia.net">aron@ahmadia.net</a>.</em></p>
+<h2>Mozilla Science and Software Carpentry Lab Meetings This Week!</h2>
+<p>We'll be having a Mozilla Science Lab meeting on November 14 at 11:00 AM. We will also be holding split time zone Software Carpentry Lab meetings at 12:00 PM and 7:00 PM Eastern Time.  More details at the <a href="{{page.root}}/blog/2013/11/nov-2013-lab-meeting-announcement.html">blog post announcement</a>.</p>
+<h2>Blog</h2>
+<p>Ben Morris, Jerico Revote, Diego Barneche, Philipp Bayer, Nicholas Crouch, and Nathan Watson-Haigh taught a three-day workshop at the University of Adelaide from the 24th through the 26th of September.  Philipp Bayer wrote a <a href="{{page.root}}/blog/2013/11/adelaide-post-mortem.html">nice summary post</a> describing the camp, as well as a few tips from their experiences:</p>
+<ul>
+  <li>VMs are extremely useful: software can be set up in advance, there's no headache with Windows/Linux differences etc. The downside: It's a bit more of a hassle to get files to students after the workshop (Nathan zipped all home-directories and sent them around, and students were encouraged to upload the work they wanted to keep to their new GitHub-accounts).</li>
+</ul>
+<ul>
+  <li>There needs to be more material on Documentation, or maybe merge this with a general "Best practices in programming" topic? Then you can also include things like naming conventions, KISS etc.</li>
+</ul>
+<ul>
+  <li>Group exercises are fun and, I think, a good way for students to try out their new knowledge and have the chance to clean any misconceptions with instructors before students go back home. However, a third day is needed which might not always be possible.</li>
+</ul>
+<ul>
+  <li>Whenever possible, a 3-day workshop is better? 4 days is probably overkill.</li>
+</ul>
+<div align="center">
+<p><img class="aligncenter" alt="" src="{{page.root}}/blog/2013/11/adelaide-bootcamp.jpg" width="509" height="382" /></p>
+<p>Image courtesy Philipp Bayer</p>
+</div>
+<h2>GitHub</h2>
+<p>We merged 6 pull requests this week, with changes across 15 files.  Congratulations to Damien Irving for adding lesson material on floating point arithmetic and Phil Lies for extending the Python function lesson in <code>bc</code>.</p>
+<p>As those following the bc repository have noticed, we have been moving discussion to issues in an effort to help manage the various conversations about the development of the project.  If you would like to follow the repository, you can either click on the `Watch` button in the top-right corner of the [bc home page](<a href="https://github.com/swcarpentry/bc" target="_blank">https://github.com/<wbr />swcarpentry/bc</a>), or you can subscribe/comment to individual issues.</p>
+<p>Most of the conversation this week happened in <a href="https://github.com/swcarpentry/bc/issues/120">Issue #120: What structure and metadata should lessons have?</a>, where a proposal for moving forward was set forth by Greg:</p>
+<blockquote>
+<p>Each Python lesson is stored in a single notebook (but the novice and intermediate lessons are in separate notebooks). Each notebook contains long-form prose, notes for learners, and notes for instructors as well as code. Cells in these notebook are tagged using <a href="https://github.com/jdfreder/notebook_cherry_picker" target="_blank">https://github.com/jdfreder/<wbr />notebook_cherry_picker</a> (I'll propose a very small set of tags in a separate message).  We run these notebooks through nbconvert to construct the notebooks that will be given to learners as a starting point in class, used by the instructor in class, read by the instructor before class to prepare, etc.</p>
+<p>We will start constructing the new novice and intermediate Python lessons, and are continuing to discuss.</p>
+</blockquote>
+<ul>
+  <li>What we do about things like R that have their own preferred formats, and</li>
+  <li>What we do about things like the shell that don't (i.e., things where we could use notebooks, plain Markdown files, or something as yet undecided).</li>
+</ul>
+<p>Greg has also opened <a href="https://github.com/swcarpentry/bc/issues/134">Issue #134: What tags should we use for lessons content?</a>, a direct follow-up to #120, where we are hoping to hammer out finer details of the metadata tags.</p>
+<p>Meanwhile, we are moving forward with two branches, `gh-pages`, and `master`.  Until the reorganization is complete, instructors teaching bootcamps should continue to use the `gh-pages` branch.  New development will happen in `master`, including the novice and intermediate lesson reorganization, as well as notebooks in the new format.  If you have any questions about the reorganization or the branches, please email <a href="mailto: aron@ahmadia.net">Aron</a> or <a href="mailto: gvwilson@software-carpentry.org">Greg</a>.</p>
+<h2>How to Help Software Carpentry this Week</h2>
+<ul>
+<li> <a href="https://github.com/swcarpentry/bc/pull/132">Get involved in the lesson reorganization</a>.</li>
+<li> <a href="https://github.com/swcarpentry/bc/issues/new">Open an issue for something that's been bothering you</a>.</li>
+<li> <a href="https://github.com/swcarpentry/bc/issues/134">Participate in the discussion on metadata tags</a>.</li>
+<li> <a href="{{page.root}}/contrib/create.html">Write some software</a>.</li>
+</ul>
+<p>Have a good week!</p>

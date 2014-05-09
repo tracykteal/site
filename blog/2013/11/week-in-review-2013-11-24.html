@@ -1,0 +1,47 @@
+---
+layout: blog
+root: ../../..
+author: Aron Ahmadia
+title: "Week in Review: Nov 18-24, 2013"
+date: 2013-11-24
+time: "12:00:00"
+category: ["Week in Review"]
+---
+<!-- start excerpt -->
+<h2>How to Get Involved in Software Carpentry this Week</h2>
+<ul>
+  <li><a href="{{page.root}}/blog/2013/11/instructor-training-in-toronto.html">Register for a live three-day version of our instructor training course in Toronto</a></li>
+  <li><a href="https://github.com/swcarpentry/bc/pull/132">Join the lesson reorganization discussion</a></li>
+  <li><a href="https://github.com/swcarpentry/bc/issues/new">Open an issue for something that's been bothering you</a></li>
+  <li><a href="https://github.com/swcarpentry/bc/issues/134">Participate in the discussion on metadata tags</a></li>
+  <li><a href="{{page.root}}/contrib/create.html">Write some software</a></li>
+</ul>
+<!-- end excerpt -->
+<h2>Recently Announced Bootcamps</h2>
+<ul>
+  <li><a href="https://github.com/jooolia/2014-01-06-unb">University of New Brunswick</a></li>
+  <li><a href="https://github.com/swcarpentry/2014-02-11-toronto">Mozilla Toronto</a></li>
+  <li><a href="https://github.com/iglpdc/2014-01-13-uri">University of Rhode Island</a></li>
+  <li><a href="https://github.com/karthik/2014-02-18-UTS">University of Technology, Sydney</a></li>
+  <li><a href="https://github.com/karthik/2014-02-13-UNSW">University of New South Wales</a></li>
+</ul>
+<h2>Blog</h2>
+<p>In a <a href="{{page.root}}/blog/2013/11/why-attend-bootcamp.html">post on why to attend bootcamps</a>, Damien Irving describes in detail the difference in practices between Nigel Nobootcamp and Betty Bootcamp. Some advanced scientific workflow notes from the post:</p>
+<ul>
+  <li>The data that Betty collects are stored in an open access repository called Dryad as soon as they're collected, and given their own DOI.</li>
+  <li>She creates a new version control repository on GitHub to hold her work.</li>
+  <li>As she does her analysis, she tracks changes to her scripts (and some output files) within that repository. She also uses the repository for her paper; it's then the hub for collaboration with her colleagues.</li>
+  <li>With respect to data analysis, Betty regularly attends her nearest SciPy conference and is on the mailing lists of her favourite data analysis packages. She is also using best practices like unit testing and defensive programming, which give her confidence that her results are reliable.</li>
+  <li>When she's happy with the state of her paper, she posts a version to a preprint server called arXiv to invite feedback from peers.</li>
+  <li>Based on that feedback, she posts several revisions before finally submitting her paper to a journal.</li>
+  <li>The published paper includes links to her preprint and to her code and data repositories.</li>
+</ul>
+<p>In a <a href="{{page.root}}/blog/2013/11/helping-write-a-paper.html">story describing his recent paper</a>, Joshua Ryan Smith narrates his own use of Software Carpentry best practices for other aspiring digital scientists. Joshua highlights several of the key components of the Software Carpentry workflow that made his paper in the Journal of Applied Physics on increasing the efficiency of a thermionic engine a success. He highlights the use of open source technologies, makefiles, version control, and documentation in both writing his software and increasing the impact of his research.</p>
+<p>Greg Wilson also wrote a <a href="{{page.root}}/blog/2013/11/updated-cold-call.html">short post explaining how to approach potential bootcamp hosts</a>. Head on over to for some guidelines and a sample email.</p>
+<h2>GitHub</h2>
+<p>We had contributions from 5 authors this week, with 51 commits pushed to the gh-pages and master branches. On gh-pages, 82 files have changed and there have been ~3.7k line modifications across 15 merged pull requests. Half a dozen instructors have been working steadily on the new master branch, where reorganized lesson development will be taking place through early 2014. We will freezing material development in gh-pages this week, so please start submitting pull requests against the master branch. I will be tagging the repository in gh-pages with 2014.11 at the end of the month, so please join the effort in merging all open pull requests against this branch before we move our efforts to master.</p>
+<p>Thanks to Will Trimble, who has been continuing to lead efforts on readying the material in gh-pages for the November release tag, and has written and helped merge in several pull requests to the branch this week.</p>
+<h2>New Lesson Planning</h2>
+<p>We are continuing to discuss, plan, and design new and reorganized lessons in the master branch. Greg Wilson has been leading beginner lesson development while Ethan White has been focusing on intermediate lessons. Jennifer Bryan, Karthik Ram, John Blischak, and Gavin Simpson have been discussing the development of Software Carpentry's R material in <a href="https://github.com/swcarpentry/bc/issues/124">Issue 124</a>. Jenny has posted an excellent summary of John Blischak's original proposal and conclusions from the subsequent discussion <a href="https://github.com/swcarpentry/bc/issues/124#issuecomment-28851135">here</a>.</p>
+<h2>Automated Rendering of IPython Notebooks</h2>
+<p>In an effort to reduce our redundant material, especially targeting Python, we are switching to generating HTML from IPython Notebook files in the master branch instead of relying on redundant HTML or Markdown content checked into maintained branches in <a href="https://github.com/swcarpentry/bc/pull/166">Pull Request 166</a>. Please participate in this pull request if you are interested in using and pre-rendering IPython Notebooks for lesson content.</p>
