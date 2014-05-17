@@ -107,12 +107,11 @@ def get_description(bootcamp):
     '''
     address = ''
     if bootcamp.get('address'):
-        address = 'at {0}'.format(bootcamp['address'])
+        address = u'at {0}'.format(bootcamp['address'])
     instructors = ''
     if bootcamp.get('instructor'):
-        instructors='led by {0}'.format(
-            ','.join(bootcamp['instructor'])) 
-    return 'A boot camp will be held on {0} {1} {2}'.format(
+        instructors = u'led by {0}'.format(u','.join(bootcamp['instructor']))
+    return u'A boot camp will be held on {0} {1} {2}'.format(
         bootcamp['humandate'], address, instructors)
 
 #----------------------------------------
