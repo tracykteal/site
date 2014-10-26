@@ -1,0 +1,64 @@
+---
+layout: blog
+root: ../../..
+author: Greg Wilson
+title: "Designing an Administration Tool"
+date: 2014-10-26
+time: "11:30:00"
+category: ["Tooling"]
+---
+<!-- start excerpt -->
+Take everything I say below sceptically, since (a) I invented the current mess, and am therefore more comfortable with it than any sane human being would be, and (b) my needs are very different from Arliss and Giacomo's: I mostly update information about instructor trainees, and generate reports (some for consistency between the DB and the website, some for grant purposes).
+
+The workflow I see is:
+
+a. We make contact with a site (call it `euphoric.edu`), either by mailing them or by them sending us mail or filling in a web form. Right away, we need to start keeping track of the conversation we're having with them that will hopefully lead up to a workshop.  That can last days or months, and personnel on both ends can change during that time (i.e., we might wind up talking to someone different than the first person we made contact with, and the person handling it at our end might change too).  Right now, Arliss keeps track of the conversation in text files in a GitHub repo, and Giacomo tracks them with email.
+
+b. Eventually (hopefully) that conversation turns into a commitment to host a workshop on a particular date; then or later, we also figure out the instructors and helpers.  At that point, we want to:
+
+   1. set up pre- and post-assessment surveys;
+   2. create a checklist so that the host and instructors can keep track of things;
+   3. (possibly) create an Eventbrite registration page;
+   4. create a GitHub repo for the workshop;
+   5. add that GitHub repo to the main software-carpentry.org website (and/or the Data Carpentry website).
+
+c. Between the time the workshop is set up and the time it runs, there will be a lot more conversation (lining up other instructors, helpers, flights, catering, etc.).  If I understand correctly, Arliss and Giacomo both track that through email: Arliss's is split between her software-carpentry.org and mozillafoundation.org accounts, and Giacomo's is under his epcc.ed.ac.uk account.  Note that the workshop's dates and instructors can change after it's created; this can either be handled as changing things, or setting up a new one and "cancelling" the old.  (If we don't create a fresh and cancel the old, we wind up with a URL like 2015-01-15-euphoric for a workshop running in March, not January, which is confusing.)
+
+d. Once the workshop is done, we need to gather survey responses and record any last notes for the next time.  Greg then gathers the attendee list, gets them into our database by editing the `roster.sql` file, records the total number of attendees (not everyone will give us their email, not all the people who registered will have attended, so we can't simply count emails) and (possibly) adds them to our announcements mailing list.
+
+Steps a-d above are done by hand right now, which is sucking time out of us every day.  What is sucking time out of us less often, but on a bigger scale, is:
+
+1. getting someone new up to speed (e.g., Arliss starting in January), and
+
+2. transferring ongoing conversations and workshops between coordinators (e.g., Arliss picking up Amy's stuff after July).
+
+If we're going to scale up to 2.5 FTE organizers by the end of 2015 (a random number I made up for the board based on the target number of workshops, which I also made up, but at least it gives us something to shoot for), and if those 2.5 FTE are actually embodied as 4 or 5 people working various fractions of their time, we have to:
+
+1. simplify and automate (you knew I was going to say that), but also
+
+2. make it a lot easier to move conversations between coordinators so that things don't freeze up if someone is off on holiday, and so that we can load-balance if one person is overloaded but someone else can step in.
+
+I suggested that the admin tool should include a wiki with benefits so that:
+
+1. coordinators can update it to keep track of conversations, then
+
+2. push buttons to create surveys, set up the Eventbrite, etc. (the "benefits" part).
+
+Aleksandra felt that data would get lost between people's inboxes and the wiki (if you're coordinating a dozen workshops at once, you might not have time to update notes until some crucial information gets lost).  Options include:
+
+1. Live with it.
+
+2. Use some sort of off-the-shelf ticketing system (either open source or commercial-for-pay) to coordinate workshops, and use its API for triggered events and for getting information into our record-keeping database.
+
+3. Allow people to Cc mail to the admin tool, which would store it so that the next person to organize a workshop with that site would have the whole conversation available.  (The Roundup bug tracker does this: basically, every issue is a mini-mailing list, and every time someone is Cc'd, they're added to that list, so that it always includes the right set of people, and the home page for each "mailing list" includes buttons for setting status etc.  It's clever.)
+
+So:
+
+* Aleksandra, is this a fair summary?
+
+* Arliss and Giacomo, what have I missed, and where are my priorities wrong?
+
+* Tracy, what do you think Data Carpentry needs that I haven't covered?
+
+* Leszek et al, what other information do you need?
+<!-- end excerpt -->
